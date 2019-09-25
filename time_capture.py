@@ -234,7 +234,7 @@ def main():
                                      formatter_class=formatter)
     parser.add_argument('--path', '-p',
                         help='path to folder where logs and stash are stored',
-                        dest='path', default=None, required=True)
+                        dest='path', default=os.path.dirname(os.path.realpath(__file__)))
     args = parser.parse_args()
 
     now = datetime.datetime.now()
